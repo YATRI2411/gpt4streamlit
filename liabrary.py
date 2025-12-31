@@ -1,0 +1,4 @@
+streamlit
+openai
+hugging_face
+ 
