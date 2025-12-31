@@ -1,11 +1,14 @@
 import streamlit as st
 from openai import OpenAI
-
+import os
 
 client = OpenAI(api_key="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")
 
 
 st.title("Text Helper with GPT")
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+HF_API_KEY = os.getenv("HF_API_KEY")
 
 # Dropdown
 task = st.selectbox(
@@ -80,4 +83,5 @@ if st.button("Ask"):
 # )
 
 # print('\nAI Response:\n')
+
 # print(response.choices[0].message.content)
